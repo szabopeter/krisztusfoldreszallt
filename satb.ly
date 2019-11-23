@@ -16,6 +16,7 @@
 global = {
   \key a \major
   \time 6/8
+  \partial 8
 }
 
 sopranoOne = \relative c'' {
@@ -182,51 +183,43 @@ verseTwoBass = \lyricmode {
 }  
 
 sopranoVoicePart = \new Staff \with {
-  instrumentName = "SA"
-  shortInstrumentName = "SA"
+  instrumentName = "S."
+  shortInstrumentName = "S."
   midiInstrument = "acoustic grand"
-} { 
-  \new Voice = "soprano" { \sopranoVoice }
-  \new Voice = "alto" { \altoVoice }
-  \addlyrics { \verseOneBass }
-  \addlyrics { \verseTwoBass }
-}
+} { \sopranoVoice }
+\addlyrics { \verseOneBass }
+\addlyrics { \verseTwoBass }
 
-%altoVoicePart = \new Staff \with {
-%  instrumentName = "A."
-%  shortInstrumentName = "A."
-%  midiInstrument = "acoustic grand"
-%} { \altoVoice }
-%\addlyrics { \verseOneBass }
-%\addlyrics { \verseTwoBass }
+altoVoicePart = \new Staff \with {
+  instrumentName = "A."
+  shortInstrumentName = "A."
+  midiInstrument = "acoustic grand"
+} { \altoVoice }
+\addlyrics { \verseOneBass }
+\addlyrics { \verseTwoBass }
 
 tenorVoicePart = \new Staff \with {
-  instrumentName = "TB"
-  shortInstrumentName = "TB"
+  instrumentName = "T."
+  shortInstrumentName = "T."
   midiInstrument = "acoustic grand"
-} {
-  \new Voice = "tenor" { \clef "treble_8" \tenorVoice }
-  \addlyrics { \verseOneBass }
-  \addlyrics { \verseTwoBass }
-  \new Voice = "bass" { \clef bass \bassVoice }
-}
+} { \clef "treble_8" \tenorVoice }
+\addlyrics { \verseOneBass }
+\addlyrics { \verseTwoBass }
 
-%bassVoicePart = \new Staff \with {
-%  instrumentName = "B."
-%  shortInstrumentName = "B."
-%  midiInstrument = "acoustic grand"
-%} { \clef bass \bassVoice }
-%\addlyrics { \verseOneBass }
-%\addlyrics { \verseTwoBass }
+bassVoicePart = \new Staff \with {
+  instrumentName = "B."
+  shortInstrumentName = "B."
+  midiInstrument = "acoustic grand"
+} { \clef bass \bassVoice }
+\addlyrics { \verseOneBass }
+\addlyrics { \verseTwoBass }
 
 \score {
-  \new ChoirStaff
   <<
-    \partial 8
     \sopranoVoicePart
-    % \altoVoicePart
+    \altoVoicePart
     \tenorVoicePart
-    % \bassVoicePart
+    \bassVoicePart
   >>
   \layout { }
   \midi {
