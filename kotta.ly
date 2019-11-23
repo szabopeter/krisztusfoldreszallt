@@ -41,7 +41,7 @@ sopranoFive = \relative c'' {
   gis4 eis8 cis4.
 }
 sopranoSix = \relative c'' {
-  a8. (gis16) fis8 eis8. (dis16) fis8
+  a8. (gis16) fis8 eis8. (dis16) eis8
   fis4. fis4
 }
 sopranoVoice = \relative c'' {
