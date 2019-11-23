@@ -56,6 +56,7 @@ sopranoVoice = \relative c'' {
   \sopranoFive
   \sopranoFour
   \sopranoSix
+  \bar "|."
 }
 
 altoOne = \relative c'' {
