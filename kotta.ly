@@ -15,7 +15,7 @@
 
 global = {
   \key a \major
-  \time 3/4
+  \time 6/8
   \partial 8
 }
 
@@ -26,7 +26,7 @@ sopranoOne = \relative c'' {
 }
 sopranoTwo = {
   a4 fis8 fis8. (eis16) fis8
-  gis4. cis,4.
+  gis4. cis,4
 }
 sopranoThree = \relative c'' {
   a8. (gis16) fis8 eis8. (dis16) eis8
@@ -58,9 +58,47 @@ sopranoVoice = \relative c'' {
   \sopranoSix
 }
 
+altoOne = \relative c'' {
+  fis,8
+  fis4 gis8 a4 a8
+  gis4 fis8 e4 d8
+}
+altoTwo = {
+  cis8 (d) cis cis4 b8
+  cis8. (d16 cis8) cis4
+}
+altoThree = \relative c' {
+  cis4 d8 cis4 cis8
+  d4. cis4.
+}
+altoFour = \relative c'' {
+  cis4. cis8. (b16) a8
+  gis4 fis8 e4 d8
+}
+altoFive = \relative c' {
+  cis8 (d8) cis8 cis4 b8
+  cis8 (d8) cis8 cis4.
+}
+altoSix = \relative c'' {
+  a4. a4 a8
+  gis4 fis8 e4 e8
+}
+altoSeven = \relative c' {
+  cis4 d8 cis4 cis8
+  d4. cis4
+}
 altoVoice = \relative c' {
   \global
   \dynamicUp
+  \altoOne
+  \altoTwo
+  \altoOne
+  \altoThree
+  %\bar "|" \break
+  \altoFour
+  \altoFive
+  \altoSix
+  \altoSeven
 }
 
 tenorVoice = \relative c' {
@@ -132,7 +170,7 @@ bassVoicePart = \new Staff \with {
 \score {
   <<
     \sopranoVoicePart
-    % \altoVoicePart
+    \altoVoicePart
     % \tenorVoicePart
     % \bassVoicePart
   >>
