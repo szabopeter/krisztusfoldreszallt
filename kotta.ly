@@ -129,9 +129,32 @@ tenorVoice = \relative c' {
   gis8 (a8) b8 a4
 }
 
+bassOne = \relative c {
+  fis8
+  fis4 fis8 fis4 fis8
+  e4 e8 e4 e8
+}
 bassVoice = \relative c {
   \global
   \dynamicUp
+  \bassOne
+  fis4 e8 d4 d8
+  cis4. cis4
+  \bassOne
+  fis4 b,8 cis4 cis8
+  fis4. fis4.
+
+  a4. a4 a8
+  e4 e8 e4 e8
+
+  fis4 e8 d4 d8
+  cis4 cis8 cis4.
+
+  a'4. fis4 fis8
+  gis4 gis8 cis,4 cis8
+
+  fis4 b,8 cis4 cis8
+  fis4. fis4
 }
 
 verseOneBass = \lyricmode {
@@ -187,15 +210,15 @@ bassVoicePart = \new Staff \with {
   shortInstrumentName = "B."
   midiInstrument = "acoustic grand"
 } { \clef bass \bassVoice }
-%\addlyrics { \verseOneBass }
-%\addlyrics { \verseTwoBass }
+\addlyrics { \verseOneBass }
+\addlyrics { \verseTwoBass }
 
 \score {
   <<
     \sopranoVoicePart
     \altoVoicePart
     \tenorVoicePart
-    % \bassVoicePart
+    \bassVoicePart
   >>
   \layout { }
   \midi {
