@@ -16,7 +16,7 @@
 global = {
   \key a \major
   \time 3/4
-  %\partial 8
+  \partial 8
 }
 
 sopranoOne = \relative c'' {
@@ -32,7 +32,18 @@ sopranoThree = \relative c'' {
   a8. (gis16) fis8 eis8. (dis16) eis8
   fis4. fis4.
 }
-
+sopranoFour = \relative c'' {
+  e4. e8. (dis16) cis8
+  b4 gis8 e8. (fis16) gis8
+}
+sopranoFive = \relative c'' {
+  a4 fis8 fis8. (eis16) fis8
+  gis4 eis8 cis4.
+}
+sopranoSix = \relative c'' {
+  a8. (gis16) fis8 eis8. (dis16) fis8
+  fis4. fis4
+}
 sopranoVoice = \relative c'' {
   \global
   \dynamicUp
@@ -40,6 +51,11 @@ sopranoVoice = \relative c'' {
   \sopranoTwo
   \sopranoOne
   \sopranoThree
+  \bar "|" \break
+  \sopranoFour
+  \sopranoFive
+  \sopranoFour
+  \sopranoSix
 }
 
 altoVoice = \relative c' {
@@ -62,6 +78,11 @@ verseOneBass = \lyricmode {
   Má -- ri -- a be -- pó -- lyált?
   Ne mondd, hogy még nem is -- me -- red a
   Föld -- nek meg -- vál -- tó -- ját.
+  
+  Halld an -- gyal, é -- nek zen -- gi,
+  Jé -- zus Krisz -- tus föld -- re szállt.
+  Légy bölcs vagy jám -- bor pász -- tor,
+  kí -- nálj Né -- ki szál -- lást!
 }
 
 verseTwoBass = \lyricmode {
@@ -69,6 +90,11 @@ verseTwoBass = \lyricmode {
   hogy á -- gya dur -- va já -- szol?
   És fé -- nyes csil -- lo -- gás he -- lyett
   csak egy kis mécs vi -- lá -- gol?
+  
+  El -- hagy -- ta Ő az é -- gi trónt,
+  "s a" menny -- ben min -- de -- nét,
+  Szent szí -- ve úgy sze -- ret, 
+  le -- hoz -- ta Ő a bé -- két.
 }  
 
 sopranoVoicePart = \new Staff \with {
