@@ -182,51 +182,29 @@ verseTwoBass = \lyricmode {
 }  
 
 sopranoVoicePart = \new Staff \with {
-  instrumentName = "SA"
-  shortInstrumentName = "SA"
+  instrumentName = \markup \center-column { S A }
+  shortInstrumentName = \markup \center-column { S A }
   midiInstrument = "acoustic grand"
-} { 
-  \new Voice = "soprano" { \sopranoVoice }
-  \new Voice = "alto" { \altoVoice }
-  \addlyrics { \verseOneBass }
-  \addlyrics { \verseTwoBass }
-}
-
-%altoVoicePart = \new Staff \with {
-%  instrumentName = "A."
-%  shortInstrumentName = "A."
-%  midiInstrument = "acoustic grand"
-%} { \altoVoice }
-%\addlyrics { \verseOneBass }
-%\addlyrics { \verseTwoBass }
+} <<
+  \sopranoVoice \\ \altoVoice
+>>
 
 tenorVoicePart = \new Staff \with {
-  instrumentName = "TB"
-  shortInstrumentName = "TB"
+  instrumentName = \markup \center-column { T B }
+  shortInstrumentName = \markup \center-column { T B }
   midiInstrument = "acoustic grand"
-} {
-  \new Voice = "tenor" { \clef "treble_8" \tenorVoice }
+} <<
+  \clef bass \tenorVoice \\ \bassVoice
   \addlyrics { \verseOneBass }
   \addlyrics { \verseTwoBass }
-  \new Voice = "bass" { \clef bass \bassVoice }
-}
-
-%bassVoicePart = \new Staff \with {
-%  instrumentName = "B."
-%  shortInstrumentName = "B."
-%  midiInstrument = "acoustic grand"
-%} { \clef bass \bassVoice }
-%\addlyrics { \verseOneBass }
-%\addlyrics { \verseTwoBass }
+>>
 
 \score {
   \new ChoirStaff
   <<
     \partial 8
     \sopranoVoicePart
-    % \altoVoicePart
     \tenorVoicePart
-    % \bassVoicePart
   >>
   \layout { }
   \midi {
