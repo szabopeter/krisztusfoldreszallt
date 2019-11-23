@@ -159,7 +159,7 @@ bassVoice = \relative c {
 }
 
 verseOneBass = \lyricmode {
-  Ki az, kit csen -- des á -- hí -- tat -- tal
+  "1. Ki" az, kit csen -- des á -- hí -- tat -- tal
   Má -- ri -- a be -- pó -- lyált?
   Ne mondd, hogy még nem is -- me -- red a
   Föld -- nek meg -- vál -- tó -- ját.
@@ -171,7 +171,7 @@ verseOneBass = \lyricmode {
 }
 
 verseTwoBass = \lyricmode {
-  Ha nagy ki -- rály, mi -- ként le -- het,
+  "2. Ha" nagy ki -- rály, mi -- ként le -- het,
   hogy á -- gya dur -- va já -- szol?
   És fé -- nyes csil -- lo -- gás he -- lyett
   csak egy kis mécs vi -- lá -- gol?
