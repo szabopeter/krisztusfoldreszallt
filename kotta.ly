@@ -101,9 +101,32 @@ altoVoice = \relative c' {
   \altoSeven
 }
 
+tenorOne = \relative c {
+  fis8
+  a4 b8 cis4 d8
+  e4 b8 gis8 (a8) b8
+}
 tenorVoice = \relative c' {
   \global
   \dynamicUp
+  \tenorOne
+  a4 a8 fis4 fis8
+  eis4. eis4
+  \tenorOne
+  a4 a8 gis8 (a8) b8
+  gis8 (a8 b8) a4.
+
+  e'4. cis4 dis8
+  e4 b8 gis8 (a8) b8
+
+  a4 a8 fis4 fis8
+  eis4 gis8 eis4.
+
+  cis'4. cis8 (b8) e8
+  dis4 b8 cis4 b8
+
+  a4 a8 gis8 (a8) b8
+  gis8 (a8) b8 a4
 }
 
 bassVoice = \relative c {
@@ -156,8 +179,8 @@ tenorVoicePart = \new Staff \with {
   shortInstrumentName = "T."
   midiInstrument = "acoustic grand"
 } { \clef "treble_8" \tenorVoice }
-%\addlyrics { \verseOneBass }
-%\addlyrics { \verseTwoBass }
+\addlyrics { \verseOneBass }
+\addlyrics { \verseTwoBass }
 
 bassVoicePart = \new Staff \with {
   instrumentName = "B."
@@ -171,7 +194,7 @@ bassVoicePart = \new Staff \with {
   <<
     \sopranoVoicePart
     \altoVoicePart
-    % \tenorVoicePart
+    \tenorVoicePart
     % \bassVoicePart
   >>
   \layout { }
